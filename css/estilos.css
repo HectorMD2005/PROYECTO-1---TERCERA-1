@@ -1,6 +1,178 @@
-/*Paleta de colores a utilizar 
+
+/* Paleta de colores */
 :root {
-    --color-fondo: #F5F1E8;
-    --color-secundario: #8A9A7B;
-    --color-principal: #344536;
-}*/
+    --color-fondo: #ffffff;
+    --color-principal: #9dac8f;
+    --color-secundario: #f8f2e3;
+    --color-texto: #000;
+    --ancho-max: 1080px;
+}
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+/* Portada principal */
+.portada {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.portada img {
+    width: 100%;
+    margin: 20px 10px;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor secundario */
+.contenedor-secundario {
+    background-color: var(--color-principal);
+    margin: 20px 10px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Título de la sección */
+.contenedor-secundario h2 {
+    text-align: center;
+    font-size: 25px;
+    color: var(--color-texto);
+    margin-bottom: 30px;
+}
+
+/* Características */
+.detalle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Tarjetas individuales */
+.detalle article {
+    flex: 1 1 250px;
+    background-color: var(--color-secundario);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Títulos de las tarjetas */
+.detalle h3 {
+    color: var(--color-texto);
+    font-size: 20px;
+}
+
+/* Descripciones */
+.detalle p {
+    line-height: 1.5;
+}
+
+/* Contenedor de servicios */
+.contenedor-cards {
+    width: auto;
+    background-color: var(--color-principal);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Título de servicios */
+.contenedor-cards h2 {
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+/* Organización de las tarjetas */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Tarjetas individuales */
+.tarjeta {
+    flex: 1 1 250px;
+    background-color: var(--color-secundario);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+/* Imágenes de servicios */
+.tarjeta img {
+    width: 100%;
+    height: 250px;
+}
+
+/* Títulos de servicios */
+.tarjeta h3 {
+    text-align: center;
+    margin: 15px;
+}
+
+/* Efecto al pasar el cursor */
+.tarjeta:hover {
+    transform: translateY(-6px);
+}
+
+/* Párrafos de las tarjetas */
+.tarjeta p {
+    margin: 10px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Sección de servicios */
+.servicios {
+    text-align: left;
+    margin: 10px;
+}
+
+/* Contenedor del botón */
+.contenedor-boton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botón */
+.boton {
+    display: inline-block;
+    background-color: var(--color-texto);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+/* Efecto del botón */
+.boton:hover {
+    transform: translateY(-2px);
+}
