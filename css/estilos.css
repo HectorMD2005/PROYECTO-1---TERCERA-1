@@ -115,17 +115,16 @@ body {
     display: wrap;
     align-items: center;
 
-    background-image: url("../img/image_218b529e.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    position: relative;
+    background-image: url("../img/image_218b529e.jpg"); /*Esto se utiliza para colocar la imagen de fondo*/
+    background-size: cover; /*Se usa cover para indicar que tome todo el espacio de la seccion portada*/
+    background-position: center; /*de manera directa para que se posicione en el centro de la seccion*/
+    background-repeat: no-repeat;/*no duplica imagenes*/
+    position: relative;/*adaptativa*/
 }
 
 .texto-portada {
     position: relative;
-    z-index: 2;
+    z-index: 2;/*Es para definir la sobre posicion de los registros adelante o atras*/
     width: 50%;
     max-width: 450px;
 }
@@ -150,8 +149,6 @@ body {
 .imagen-portada {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
 }
 
 .imagen-portada img {
@@ -159,13 +156,13 @@ body {
     width: 100%;
     max-width: 430px;
     height: 340px;
-    object-fit: cover;
+    object-fit: cover; /*Se define para que llene el espacio del contenedor sin deformarse*/
 }
 
 /* BOTON DE PORTADA */
 
 .texto-portada .boton {
-    display: inline-block;
+    display: inline-block;/*Permite que se coloquen a la par entre textos*/
     padding: 13px 25px;
     background-color: var(--color-texto);
     color: var(--color-texto2);
@@ -174,12 +171,11 @@ body {
 }
 
 .texto-portada .boton:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px);/*genera un desplasamiento hacia arriba al poner el raton sobre el boton*/
 }
 
 
-/* 5. SERVICIOS PRINCIPALES
-*/
+/* 5. SERVICIOS PRINCIPALES*/
 
 /* CONTENEDOR DE SERVICIOS */
 
@@ -230,10 +226,10 @@ body {
     overflow: hidden;
     transition: transform 0.2s;
     padding-bottom: 15px;
-
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    
 }
 
 /* IMAGENES DE SERVICIOS */
@@ -309,7 +305,7 @@ body {
 .detalle {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; /*con esta propiedad se realiza que sea adaptativo*/
     gap: 20px;
     color: var(--color-texto);
 }
@@ -388,7 +384,6 @@ body {
 .decoracion {
     width: 100%;
     max-width: none;
-    background-color: transparent;
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s;
@@ -403,16 +398,17 @@ body {
     object-fit: cover;
     border-radius: 3px;
     transition: transform 0.4s;
+    border: 10px solid var(--color-texto); 
 }
 
 /* EFECTOS */
 
 .decoracion:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 .decoracion:hover img {
-    transform: scale(1.04);
+    transform: scale(1.15);
 }
 
 
@@ -494,7 +490,6 @@ body {
     width: 100%;
     padding: 1rem;
     text-align: left;
-    font-family: inherit;
     font-size: 1rem;
     color: var(--color-texto);
     background: var(--color-fondo);
@@ -542,12 +537,11 @@ body {
     border-radius: 5px;
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    font-family: inherit;
     font-size: 16px;
 }
 
 .formulario textarea {
-    resize: vertical;
+    resize: vertical; /*reorganizacion*/
 }
 
 .formulario input:focus,
@@ -606,44 +600,34 @@ HASTA 500 PX
 @media (max-width: 500px) {
 
     /* PORTADA */
-
     .portada {
         min-height: 450px;
         padding: 30px 20px;
         justify-content: center;
         text-align: center;
     }
-
     .texto-portada {
         width: 100%;
         max-width: 100%;
     }
-
     .texto-portada h1 {
         font-size: 2rem;
     }
-
     .texto-portada p {
         font-size: 16px;
         margin: 0 auto 25px;
     }
-
     .imagen-portada {
         justify-content: center;
     }
-
     .imagen-portada img {
         height: 260px;
     }
-
     /* SERVICIOS */
-
     .contenedor-cards {
         padding: 20px 10px;
     }
-
     /* GALERIA */
-
     .contenedor-terciario {
         padding: 25px 15px;
         margin: 20px auto;
@@ -663,7 +647,6 @@ HASTA 500 PX
     }
 
     /* CONTACTO */
-
     .contenedor-cuarto {
         padding: 20px;
         font-size: 18px;
@@ -704,11 +687,12 @@ DESDE 501 PX HASTA 990 PX
 
 }
 
-
 /* 
 14. ADAPTACION PARA COMPUTADORAS
 DESDE 991 PX*/
+@media (min-width: 701px) { .tarjeta { width: calc(50% - .5rem); } 
 
+}
 @media (min-width: 991px) {
 
     /* MENU */
