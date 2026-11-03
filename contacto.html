@@ -1,4 +1,49 @@
-    <footer class="footer">
+<html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOOM ST</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="Index.html" class="logo">H.F BLOOM STUDIO</a>
+
+        <button class="navegacion" id="btnMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="enviar.php" method="post" class="formulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+        <footer class="footer">
+
         <div>
             <p><strong>BLOOM STUDIO</strong></p>
             <p>Teléfono: 2223-2222 · Correo: info@bloomstudiocr.com</p>
@@ -10,4 +55,7 @@
         </ul>
 
         <p>&copy; 2026 BLOOM STUDIO</p>
+
     </footer>
+</body>
+</html>
