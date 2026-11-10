@@ -46,8 +46,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    position: relative;
+    flex-wrap: wrap;
+    padding: 1rem;
 }
 
 .logo {
@@ -61,11 +61,12 @@ body {
 
 .menu {
     display: none;
+    width: 100%;
 }
-
 .menu ul {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 15px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -85,19 +86,14 @@ body {
 
 .menu.abierto {
     display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: static;
     width: 100%;
-    padding: 20px;
-    background-color: var(--color-principal);
-    z-index: 10;
 }
 
 .menu.abierto ul {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    padding-top: 1rem;
 }
 
 /* Botón navegacion */
@@ -544,13 +540,14 @@ ACORDEÓN DE PREGUNTAS FRECUENTES*/
     overflow: hidden;
     opacity: 0;
     padding: 0 1rem;
+
     transition:
         max-height .4s ease,
         opacity .3s ease,
         padding .3s ease;
 }
 
-/* Contenido abierto */
+/* CONTENIDO ABIERTO */
 
 .accordion .item.activo .contenido {
     max-height: 500px;
@@ -739,47 +736,29 @@ DESDE 501 PX HASTA 990 PX
 
     /* NAVEGACION */
 
-    .menu,
-    .menu.abierto {
-        display: block;
-        position: static;
-        width: auto;
-        padding: 0;
-        background: none;
-    }
+.menu,
+.menu.abierto {
+    display: block;
+    position: static;
+    width: auto;
+    padding: 0;
+    background: none;
 
-    .menu ul,
-    .menu.abierto ul {
-        flex-direction: row;
-        gap: 1.5rem;
-    }
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+}
 
-    .navegacion {
-        display: none;
-    }
+.menu ul,
+.menu.abierto ul {
+    flex-direction: row;
+    gap: 1.5rem;
+}
 
-    /* SERVICIOS: TRES TARJETAS POR FILA */
-
-    .tarjeta {
-        width: calc(33.333% - 0.67rem);
-    }
-
-    /* GALERIA: TRES COLUMNAS */
-
-    .trabajos-realizados {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
-
-    /* FOOTER */
-
-    .footer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-    }
-
+.navegacion {
+    display: none;
+}
 }
 
 

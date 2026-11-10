@@ -2,34 +2,43 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
+    // =========================================
     // 1. NAVEGACIÓN - MENÚ HAMBURGUESA
-
+    // =========================================
 
     const btnMenu = document.querySelector("#btnMenu");
     const menu = document.querySelector(".menu");
 
     if (btnMenu && menu) {
 
+        // Abrir y cerrar el menú
         btnMenu.addEventListener("click", () => {
+
             menu.classList.toggle("abierto");
             btnMenu.classList.toggle("activo");
+
         });
 
         // Cerrar el menú al seleccionar un enlace
         const enlaces = menu.querySelectorAll("a");
 
         enlaces.forEach(enlace => {
+
             enlace.addEventListener("click", () => {
+
                 menu.classList.remove("abierto");
                 btnMenu.classList.remove("activo");
+
             });
+
         });
+
     }
 
 
-
-    // 2. ACORDEÓN - SERVICIOS
-
+    // =========================================
+    // 2. ACORDEÓN - PREGUNTAS FRECUENTES
+    // =========================================
 
     const titulos = document.querySelectorAll(".accordion .titulo");
 
@@ -41,24 +50,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!item) return;
 
-            // Cerrar los demás elementos
+            // Comprobar si el elemento ya está abierto
+            const estabaAbierto = item.classList.contains("activo");
+
+            // Cerrar todos los elementos
             document.querySelectorAll(".accordion .item").forEach(otro => {
-                if (otro !== item) {
-                    otro.classList.remove("activo");
-                }
+
+                otro.classList.remove("activo");
+
             });
 
-            // Abrir o cerrar el seleccionado
-            item.classList.toggle("activo");
+            // Abrir el seleccionado si estaba cerrado
+            if (!estabaAbierto) {
+
+                item.classList.add("activo");
+
+            }
 
         });
 
     });
 
 
-
+    // =========================================
     // 3. VALIDACIÓN DEL FORMULARIO
-
+    // =========================================
 
     const form = document.querySelector(".formulario");
 
@@ -69,27 +85,42 @@ document.addEventListener("DOMContentLoaded", () => {
             const nombre = form.querySelector('[name="nombre"]');
             const correo = form.querySelector('[name="correo"]');
 
-            let errores = [];
+            const errores = [];
 
+            // Validar nombre
             if (nombre && nombre.value.trim() === "") {
+
                 errores.push("El nombre es obligatorio.");
+
             }
 
-            if (correo && !correo.value.trim().includes("@")) {
+            // Validar correo
+            if (correo && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo.value.trim())) {
+
                 errores.push("El correo no es válido.");
+
             }
 
             const mensajes = document.querySelector("#mensajes");
 
+            // Mostrar errores
             if (errores.length > 0) {
 
                 e.preventDefault();
 
                 if (mensajes) {
+
                     mensajes.textContent = errores.join(" ");
+
                 } else {
+
                     alert(errores.join("\n"));
+
                 }
+
+            } else if (mensajes) {
+
+                mensajes.textContent = "";
 
             }
 
