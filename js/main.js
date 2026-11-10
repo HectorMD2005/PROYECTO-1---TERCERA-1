@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {  //espera a que el navegad
         form.addEventListener("submit", (e) => {//En este caso la funcion espera la accion de enviar el formulario para comenzar sus validaciones, espera que el usario agregue la informa para posteriormente validar
             const nombre = form.querySelector('[name="nombre"]'); //En este se utiliza los elementos para capturar la informacion que se esta cargando en el sistema (nombre)
             const correo = form.querySelector('[name="correo"]'); //En este se utiliza los elementos para capturar la informacion que se esta cargando en el sistema (correo)
+            const mensaje = form.querySelector('[name="mensaje"]');//En este se utiliza los elementos para capturar la informacion que se esta cargando en el sistema (mensaje)
             const errores = []; //Aca se configura las constantes en este se utiliza los elementos para capturar la informacion para esta seccion queda en blanco
 
             // Validar nombre
@@ -68,6 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {  //espera a que el navegad
             // Validar correo
             if (correo && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo.value.trim())) {//En esta segunda parte lo que se hace es comparar si correo no es igual a la estructura segun la prueba que seria texto seguido del arroba despues texto segido del . del dominio
                 errores.push("El correo no es válido.");//si lo anterior es correcto cargue la informacion del campo en la constante vacia anterior
+            }
+
+            // Validar mensaje
+            if (mensaje && mensaje.value.trim() === "") {//En esta primera parte se valida la condicional si nombre y nombre.value.trim son iguales a campo vacio ademas trim retira los espacios al inicio y al final
+                errores.push("El mensaje es obligatorio.");//si lo anterior es correcto cargue la informacion del campo en la constante vacia anterior
             }
             const mensajes = document.querySelector("#mensajes"); //se declara la constante para agregar la informacion de id mensajes 
 
