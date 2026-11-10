@@ -45,7 +45,7 @@ include "header.php";
                         Creamos ramos florales únicos, diseñados según tus gustos, preferencias y ocasiones especiales. Puedes elegir los colores, tipos de flores y presentación para sorprender a esa persona especial.
                         </p>
 
-                        <a href="contacto.html" class="boton">
+                        <a href="contacto.php" class="boton">
                             Consultar
                         </a>
 
@@ -64,7 +64,7 @@ include "header.php";
                             Diseñamos ambientes llenos de belleza y elegancia para bodas, cumpleaños, aniversarios y celebraciones especiales. Creamos centros de mesa, arreglos decorativos y detalles florales que hacen de cada evento una experiencia inolvidable.
                         </p>
 
-                        <a href="contacto.html" class="boton">
+                        <a href="contacto.php" class="boton">
                             Consultar
                         </a>
 
@@ -83,7 +83,7 @@ include "header.php";
                             Ofrecemos arreglos elaborados con flores preservadas que mantienen su belleza durante mucho más tiempo. Son ideales para regalos, decoración de interiores y recuerdos especiales que deseas conservar.
                         </p>
 
-                        <a href="contacto.html" class="boton">
+                        <a href="contacto.php" class="boton">
                             Consultar
                         </a>
 
@@ -101,7 +101,7 @@ include "header.php";
                         Elaboramos composiciones florales para cumpleaños, aniversarios, graduaciones, San Valentín y otras fechas importantes. Cada arreglo se prepara con dedicación para transmitir emociones y crear momentos memorables.
                         </p>
 
-                        <a href="contacto.html" class="boton">
+                        <a href="contacto.php" class="boton">
                             Consultar
                         </a>
 
@@ -120,7 +120,7 @@ include "header.php";
                             Creamos diseños florales para acompañar uno de los días más importantes. Ofrecemos ramos de novia, decoración de ceremonias, centros de mesa y detalles florales personalizados según el estilo de cada celebración.
                         </p>
 
-                        <a href="contacto.html" class="boton">
+                        <a href="contacto.php" class="boton">
                             Consultar
                         </a>
 
@@ -139,7 +139,7 @@ include "header.php";
                             Diseñamos detalles especiales que combinan flores con presentaciones creativas para sorprender a familiares, amigos o parejas. Cada propuesta busca convertir un regalo en un recuerdo significativo.
                         </p>
 
-                        <a href="contacto.html" class="boton">
+                        <a href="contacto.php" class="boton">
                             Consultar
                         </a>
 

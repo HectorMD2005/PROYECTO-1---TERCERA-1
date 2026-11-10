@@ -16,9 +16,10 @@ include "header.php";
             inolvidables.
         </p>
 
-        <a href="nosotros.html" class="boton">
+        <a href="nosotros.php" class="boton">
             MAS SOBRE NOSOTROS →
         </a>
+        </div>
 </section>
     
         <section class="contenido servicios">

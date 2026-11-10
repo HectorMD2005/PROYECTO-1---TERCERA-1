@@ -99,7 +99,7 @@ include "header.php";
                 qué tipo de arreglo o servicio estás buscando.
             </p>
 
-            <form class="formulario">
+            <form class="formulario" action="enviar.php" method="POST">
 
                 <label for="nombre">
                     Nombre completo
@@ -124,7 +124,7 @@ include "header.php";
                     name="correo"
                     placeholder="ejemplo@correo.com"
                     required>
-                </select>
+
 
 
                 <label for="mensaje">
@@ -163,7 +163,7 @@ include "header.php";
 
             <div class="contenedor-boton">
 
-                <a href="servicios.html" class="boton">
+                <a href="servicios.php" class="boton">
                     Ver nuestros servicios
                 </a>
 

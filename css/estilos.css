@@ -41,6 +41,7 @@ body {
 /* 3. ENCABEZADO Y NAVEGACION
 */
 
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -56,10 +57,10 @@ body {
     text-decoration: none;
 }
 
-/* MENU */
+/* Menú */
 
 .menu {
-    display: none;  
+    display: none;
 }
 
 .menu ul {
@@ -73,23 +74,44 @@ body {
 .menu a {
     color: var(--color-texto);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color .2s;
 }
 
 .menu a:hover {
     color: var(--color-descripciones);
 }
 
-/* BOTON DE NAVEGACION */
+/* Menú abierto en dispositivos móviles */
+
+.menu.abierto {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color-principal);
+    z-index: 10;
+}
+
+.menu.abierto ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Botón navegacion */
 
 .navegacion {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 0.5rem;
+    padding: .5rem;
     background: none;
     border: 0;
     cursor: pointer;
+    position: relative;
+    z-index: 11;
 }
 
 .navegacion span {
@@ -98,9 +120,22 @@ body {
     height: 3px;
     background: var(--color-texto);
     border-radius: 2px;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: transform .3s ease, opacity .3s ease;
 }
 
+/* Transformación de navegacion a X */
+
+.navegacion.activo span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navegacion.activo span:nth-child(2) {
+    opacity: 0;
+}
+
+.navegacion.activo span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
 
 /* 4. PORTADA PRINCIPAL BLOOM STUDIO
 */
@@ -112,7 +147,8 @@ body {
     margin: 20px auto;
     padding: 50px;
 
-    display: wrap;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
     background-image: url("../img/image_218b529e.jpg"); /*Esto se utiliza para colocar la imagen de fondo*/
@@ -477,14 +513,16 @@ body {
 
 /* ACORDEON */
 
+/* 
+ACORDEÓN DE PREGUNTAS FRECUENTES*/
+
+
 .accordion {
     margin: 20px 10px;
     padding: 10px;
     background-color: var(--color-fondo);
     border-radius: 10px;
 }
-
-/* TITULOS DE LAS PREGUNTAS */
 
 .accordion .titulo {
     width: 100%;
@@ -498,17 +536,27 @@ body {
     cursor: pointer;
 }
 
-/* CONTENIDO DE LAS PREGUNTAS */
+/* Contenido cerrado */
 
 .accordion .contenido {
-    display: none;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
     padding: 0 1rem;
+    transition:
+        max-height .4s ease,
+        opacity .3s ease,
+        padding .3s ease;
 }
+
+/* Contenido abierto */
 
 .accordion .item.activo .contenido {
-    display: block;
+    max-height: 500px;
+    opacity: 1;
+    padding: 1rem;
 }
-
 
 /* 10. FORMULARIO DE CONTACTO
 */
@@ -687,32 +735,27 @@ DESDE 501 PX HASTA 990 PX
 
 }
 
-/* 
-14. ADAPTACION PARA COMPUTADORAS
-DESDE 991 PX*/
-@media (min-width: 701px) { .tarjeta { width: calc(50% - .5rem); } 
-
-}
 @media (min-width: 991px) {
 
-    /* MENU */
+    /* NAVEGACION */
 
-    .menu {
+    .menu,
+    .menu.abierto {
         display: block;
+        position: static;
+        width: auto;
+        padding: 0;
+        background: none;
+    }
+
+    .menu ul,
+    .menu.abierto ul {
+        flex-direction: row;
+        gap: 1.5rem;
     }
 
     .navegacion {
         display: none;
-    }
-
-    /* PORTADA */
-
-    .portada {
-        padding: 50px;
-    }
-
-    .texto-portada h1 {
-        font-size: 3.2rem;
     }
 
     /* SERVICIOS: TRES TARJETAS POR FILA */
@@ -738,6 +781,8 @@ DESDE 991 PX*/
     }
 
 }
+
+
 
 
 

@@ -18,7 +18,7 @@ include "header.php";
                     merece convertirse en un recuerdo especial.
                 </p>
 
-                <a href="servicios.html" class="boton">
+                <a href="servicios.php" class="boton">
                     CONOCE NUESTROS SERVICIOS →
                 </a>
 
@@ -132,7 +132,7 @@ include "header.php";
 
             <div class="contenedor-boton">
 
-                <a href="contacto.html" class="boton">
+                <a href="contacto.php" class="boton">
                     Hablemos de tus ideas
                 </a>
 
