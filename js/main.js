@@ -84,4 +84,83 @@ document.addEventListener("DOMContentLoaded", () => {  //espera a que el navegad
             }
         });
     }
+
+    // 4. GENERAR TARJETAS DE SERVICIOS 
+
+    const servicios = [
+        {
+            imagen: "img/S.ramos personalizados.jpg",
+            titulo: "Ramos personalizados",
+            descripcion: "Creamos ramos florales únicos, diseñados según tus gustos, preferencias y ocasiones especiales. Puedes elegir los colores, tipos de flores y presentación para sorprender a esa persona especial."
+        },
+
+        {
+            imagen: "img/imagen decoracion3.jpg",
+            titulo: "Decoración floral para eventos",
+            descripcion: "Diseñamos ambientes llenos de belleza y elegancia para bodas, cumpleaños, aniversarios y celebraciones especiales. Creamos centros de mesa, arreglos decorativos y detalles florales que hacen de cada evento una experiencia inolvidable."
+        },
+
+        {
+            imagen: "img/images.jpg",
+            titulo: "Flores preservadas",
+            descripcion: "Ofrecemos arreglos elaborados con flores preservadas que mantienen su belleza durante mucho más tiempo. Son ideales para regalos, decoración de interiores y recuerdos especiales que deseas conservar."
+        },
+
+        {
+            imagen: "img/portada1.jpg",
+            titulo: "Arreglos florales para ocasiones especiales",
+            descripcion: "Elaboramos composiciones florales para cumpleaños, aniversarios, graduaciones, San Valentín y otras fechas importantes. Cada arreglo se prepara con dedicación para transmitir emociones y crear momentos memorables."
+        },
+
+        {
+            imagen: "img/S.arreglos de bodas.jpg",
+            titulo: "Arreglos florales para bodas",
+            descripcion: "Creamos diseños florales para acompañar uno de los días más importantes. Ofrecemos ramos de novia, decoración de ceremonias, centros de mesa y detalles florales personalizados según el estilo de cada celebración."
+        },
+
+        {
+            imagen: "img/regalos.jpg",
+            titulo: "Regalos florales",
+            descripcion: "Diseñamos detalles especiales que combinan flores con presentaciones creativas para sorprender a familiares, amigos o parejas. Cada propuesta busca convertir un regalo en un recuerdo significativo."
+        }
+
+    ];
+    // FUNCIÓN PARA GENERAR LAS TARJETAS
+
+    function pintarCards(lista) {
+
+        const contenedor = document.querySelector("#contenedorServicios");
+
+        if (!contenedor) return; //comprueba que exista el contenedor con esos datos
+
+        contenedor.innerHTML = ""; //antes de procesarlo estamos limpiando el contenedor anterior
+
+        lista.forEach(servicio => {//le damos la indicancion de que recorra el listado ejecutandolo por la cantidad de partes que poseea    
+
+            const tarjeta = document.createElement("article"); //con esta seccion permite crear elementos una estructura equivalente a article
+
+            tarjeta.classList.add("tarjeta"); //con esta seccion le agregamos la clase tarjeta para que el documento pueda ser reconocido por el CSS y le aplique el estilo
+
+            tarjeta.innerHTML = `
+                <img src="${servicio.imagen}" alt="${servicio.titulo}"> 
+
+                <h3>${servicio.titulo}</h3>
+
+                <p>${servicio.descripcion}</p>
+
+                <a href="contacto.php" class="boton">
+                    Consultar
+                </a>
+            `;// en esta seeccion se agrega la informacion para generar la tarjeta correspondientemente como tenemos un foreach recorre el arreglo 6 veces
+
+            contenedor.appendChild(tarjeta); //esta funcion agrega la tarjeta al HTML porque appendchild agrega la informacion como un hijo
+
+        });
+
+    }
+
+    // EJECUTAR LA FUNCIÓN
+
+    pintarCards(servicios); //esta ultima imprime al informacion generada
+
 });
