@@ -1,12 +1,11 @@
 
 <?php
-session_start();
+session_start(); //se utiliza para iniciar o cargar una sesion anterior
 
-$nombre = $_SESSION["nombre"] ?? "visitante";
+$nombre = $_SESSION["nombre"] ?? "visitante"; //en este caso se recupera el nombre del formulario anterior
+unset($_SESSION["nombre"]); //se utiliza para eliminar el nombre de la sesion 
 
-unset($_SESSION["nombre"]);
-
-$tituloPagina = "MENSAJE RECIBIDO | BLOOM STUDIO";
+$tituloPagina = "MENSAJE RECIBIDO | BLOOM STUDIO"; //Se declara la variable $tituloPagina y se le asigna el título que identificará esta página.
 
 include "header.php";
 ?>
@@ -18,7 +17,7 @@ include "header.php";
         <h1>¡GRACIAS POR CONTACTARNOS!</h1>
 
         <p>
-            Hola <?php echo htmlspecialchars($nombre); ?>.
+            Hola <?php echo htmlspecialchars($nombre); ?>. <!-- Con echo se muestra lo almacenado en la variable anterior de nombre y se convierte a caraceter de htmls-->
         </p>
 
         <p>
