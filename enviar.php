@@ -46,7 +46,7 @@ if (!empty($errores)) {
             <?php endforeach; ?>
 
             <a href="contacto.php#formulario" class="boton">
-                VOLVER AL FORMULARIO
+                VOLVER AL FORMULARIO0
             </a>
 
         </section>
@@ -54,16 +54,15 @@ if (!empty($errores)) {
 
     <?php
     include "footer.php";
-    exit;
+    exit; //funciona para finalizar el proceso correspondiente
 }
 
 // Si todo está correcto, guardar el nombre temporalmente
-session_start();
-
-$_SESSION["nombre"] = $nombre;
+session_start(); //para poder guardar el nombre debemos iniciar las sesiones
+$_SESSION["nombre"] = $nombre; //en este caso $_SESSION Seria un contenedor glogal por lo tanto se puede consultar en cualquier pagina y se le asigna que la informacion sea el nombre
 
 // Redirigir a la página de agradecimiento
 header("Location: gracias.php");
-exit;
+exit; //funciona para finalizar el proceso correspondiente
 
 ?>
