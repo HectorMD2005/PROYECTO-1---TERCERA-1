@@ -1,0 +1,38 @@
+
+<footer class="footer">
+
+    <div>
+        <p><strong>BLOOM STUDIO</strong></p>
+
+        <p>
+            Teléfono: 2223-2222 ·
+            Correo: info@bloomstudiocr.com
+        </p>
+    </div>
+
+    <ul class="redes">
+        <li>
+            <a href="https://www.facebook.com/"
+               target="_blank"
+               rel="noopener">
+                Facebook
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.instagram.com/"
+               target="_blank"
+               rel="noopener">
+                Instagram
+            </a>
+        </li>
+    </ul>
+
+    <p>&copy; 2026 BLOOM STUDIO</p>
+
+</footer>
+
+<script src="./js/main.js"></script>
+
+</body>
+</html>

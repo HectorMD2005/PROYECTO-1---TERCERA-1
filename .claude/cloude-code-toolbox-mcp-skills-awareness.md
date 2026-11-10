@@ -1,6 +1,6 @@
 # Claude Code ToolBox — MCP & Skills awareness
 
-_Generated: 2026-11-03T23:50:07.688Z_
+_Generated: 2026-11-10T01:12:02.954Z_
 
 ## How to use this report
 
@@ -13,9 +13,9 @@ _Generated: 2026-11-03T23:50:07.688Z_
 
 ## MCP — workspace
 
-Workspace `mcp.json` _(folder: PROYECTO 1 FLORISTERIA)_
+Workspace `mcp.json` _(folder: proyecto2)_
 
-- **c:\Users\Hector Maldonado\Desktop\P. TERCERA 1\PROYECTOS\PROYECTO 1 FLORISTERIA\.mcp.json** — _File missing_
+- **c:\xampp\htdocs\Proyectos\proyecto2\.mcp.json** — _File missing_
 
 _No active workspace servers in mcp.json._
 
