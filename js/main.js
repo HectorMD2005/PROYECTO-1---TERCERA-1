@@ -2,9 +2,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    // =========================================
+
     // 1. NAVEGACIÓN - MENÚ HAMBURGUESA
-    // =========================================
 
     const btnMenu = document.querySelector("#btnMenu");
     const menu = document.querySelector(".menu");
@@ -36,9 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================================
     // 2. ACORDEÓN - PREGUNTAS FRECUENTES
-    // =========================================
 
     const titulos = document.querySelectorAll(".accordion .titulo");
 
@@ -72,9 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // =========================================
     // 3. VALIDACIÓN DEL FORMULARIO
-    // =========================================
 
     const form = document.querySelector(".formulario");
 
